@@ -3,6 +3,8 @@ NerdRoll
 
 A simple Android app for rolling dice, as a demo for the Mortar and Flow libraries, and heavily based off of Square's example app for Mortar.
 
+Additionally, there is an app with identical functionality written using the standard Fragment methodology.
+
 Requirements for Development
 ---
 - [Android SDK](https://developer.android.com/sdk/index.html)
