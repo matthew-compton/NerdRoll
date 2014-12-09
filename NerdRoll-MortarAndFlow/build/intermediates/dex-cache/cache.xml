@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/ambergleam/.gradle/caches/modules-2/files-2.1/com.squareup.dagger/dagger/1.2.2/e8f912ee19ad84958510883ea191135276b091f8/dagger-1.2.2.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="e8f912ee19ad84958510883ea191135276b091f8">
+        <dex dex="/Users/ambergleam/Code/general/studio-workspace/NerdRoll/NerdRoll-MortarAndFlow/app/build/intermediates/pre-dexed/debug/dagger-1.2.2-abb2c27f359431b6f8dde0562eb7df3e82b6daa6.jar" />
+    </item>
+    <item
+        jar="/Users/ambergleam/Code/general/studio-workspace/NerdRoll/NerdRoll-MortarAndFlow/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.2/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="d1bf02de1c56d942e7a9d093b8610ba1ef4128e3">
+        <dex dex="/Users/ambergleam/Code/general/studio-workspace/NerdRoll/NerdRoll-MortarAndFlow/app/build/intermediates/pre-dexed/debug/classes-14eeec0ad45811aa51ccc2fd7e6aa333977470a4.jar" />
+    </item>
+    <item
+        jar="/Users/ambergleam/.gradle/caches/modules-2/files-2.1/net.orfjackal.retrolambda/retrolambda/1.6.1/96040fa2dce4247366a708e48ccd268eca390cd9/retrolambda-1.6.1.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="96040fa2dce4247366a708e48ccd268eca390cd9">
+        <dex dex="/Users/ambergleam/Code/general/studio-workspace/NerdRoll/NerdRoll-MortarAndFlow/app/build/intermediates/pre-dexed/debug/retrolambda-1.6.1-0ed799dc7aee8100c0ca536b7f42ce306e6020b9.jar" />
+    </item>
+    <item
+        jar="/Applications/android-sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.2/support-annotations-21.0.2.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="99373741f99a0556ee293c41e8faa1ca3ae8a4e6">
+        <dex dex="/Users/ambergleam/Code/general/studio-workspace/NerdRoll/NerdRoll-MortarAndFlow/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.2-d06734590ed4eaf06d6ffff54f771bef9750589d.jar" />
+    </item>
+    <item
+        jar="/Users/ambergleam/.gradle/caches/modules-2/files-2.1/com.netflix.rxjava/rxjava-android/0.20.4/e099d9501cff3c13949489dbb6985b8429c59292/rxjava-android-0.20.4.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="e099d9501cff3c13949489dbb6985b8429c59292">
+        <dex dex="/Users/ambergleam/Code/general/studio-workspace/NerdRoll/NerdRoll-MortarAndFlow/app/build/intermediates/pre-dexed/debug/rxjava-android-0.20.4-7fd01d6679bc33875e8b976ffe79eafbf99313df.jar" />
+    </item>
+    <item
+        jar="/Users/ambergleam/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3.1/ecb6e1f8e4b0e84c4b886c2f14a1500caf309757/gson-2.3.1.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="/Users/ambergleam/Code/general/studio-workspace/NerdRoll/NerdRoll-MortarAndFlow/app/build/intermediates/pre-dexed/debug/gson-2.3.1-560facfadbcad41e71c966a6ab6ccc9a493045ec.jar" />
+    </item>
+    <item
+        jar="/Users/ambergleam/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/5.1.2/daf5472b0df6dabaceb6ad755b3812535863965a/butterknife-5.1.2.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="daf5472b0df6dabaceb6ad755b3812535863965a">
+        <dex dex="/Users/ambergleam/Code/general/studio-workspace/NerdRoll/NerdRoll-MortarAndFlow/app/build/intermediates/pre-dexed/debug/butterknife-5.1.2-7fd6add23a48e2c56e82ebccbb5af45b9a4f5999.jar" />
+    </item>
+    <item
+        jar="/Users/ambergleam/Code/general/studio-workspace/NerdRoll/NerdRoll-MortarAndFlow/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.2/libs/internal_impl-21.0.2.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="962e8b12569c56dbdcf8367eb4eac8bb129cd18f">
+        <dex dex="/Users/ambergleam/Code/general/studio-workspace/NerdRoll/NerdRoll-MortarAndFlow/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.2-892f543a773479ccae211248d293e5afd83df76b.jar" />
+    </item>
+    <item
+        jar="/Users/ambergleam/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/ambergleam/Code/general/studio-workspace/NerdRoll/NerdRoll-MortarAndFlow/app/build/intermediates/pre-dexed/debug/javax.inject-1-2fa0bfa9b0d211337d1340e143c79abcdacda901.jar" />
+    </item>
+    <item
+        jar="/Users/ambergleam/.gradle/caches/modules-2/files-2.1/com.squareup.mortar/mortar/0.16/dd9e7052ee528f7fe43486649d7a3eb2d798607/mortar-0.16.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="0dd9e7052ee528f7fe43486649d7a3eb2d798607">
+        <dex dex="/Users/ambergleam/Code/general/studio-workspace/NerdRoll/NerdRoll-MortarAndFlow/app/build/intermediates/pre-dexed/debug/mortar-0.16-56b2dea2009f15052efda7eafa65f3fbdd0384d7.jar" />
+    </item>
+    <item
+        jar="/Users/ambergleam/Code/general/studio-workspace/NerdRoll/NerdRoll-MortarAndFlow/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="7ae2d38807a43b2f2185ff4089a92c790b579e54">
+        <dex dex="/Users/ambergleam/Code/general/studio-workspace/NerdRoll/NerdRoll-MortarAndFlow/app/build/intermediates/pre-dexed/debug/classes-c0c3d0ef90b26943360a4b1c51cf3a1c172b233c.jar" />
+    </item>
+    <item
+        jar="/Users/ambergleam/.gradle/caches/modules-2/files-2.1/com.netflix.rxjava/rxjava-core/0.20.4/bbb645aee7782cd4ba838442f42edf1a1d352604/rxjava-core-0.20.4.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="bbb645aee7782cd4ba838442f42edf1a1d352604">
+        <dex dex="/Users/ambergleam/Code/general/studio-workspace/NerdRoll/NerdRoll-MortarAndFlow/app/build/intermediates/pre-dexed/debug/rxjava-core-0.20.4-c12b259448bed7ff734b97568192f89e308015a8.jar" />
+    </item>
+    <item
+        jar="/Users/ambergleam/.gradle/caches/modules-2/files-2.1/com.squareup.flow/flow/0.8/a9eb56d1fede600444f683ae8d506327937133e5/flow-0.8.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="a9eb56d1fede600444f683ae8d506327937133e5">
+        <dex dex="/Users/ambergleam/Code/general/studio-workspace/NerdRoll/NerdRoll-MortarAndFlow/app/build/intermediates/pre-dexed/debug/flow-0.8-7960a03caa2c942e2e2d3904062565611b262e62.jar" />
+    </item>
+
+</items>

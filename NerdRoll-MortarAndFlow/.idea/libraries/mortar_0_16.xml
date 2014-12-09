@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="mortar-0.16">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.mortar/mortar/0.16/dd9e7052ee528f7fe43486649d7a3eb2d798607/mortar-0.16.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.mortar/mortar/0.16/f52b556fe7dd9bf17f32d39e19718310935a007a/mortar-0.16-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

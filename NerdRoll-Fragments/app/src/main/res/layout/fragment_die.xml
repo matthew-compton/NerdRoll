@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.bignerdranch.android.nerdroll.view.DieView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_die_container"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,7 +9,7 @@
     >
 
     <TextView
-        android:id="@+id/view_die_random"
+        android:id="@+id/fragment_die_random"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -24,7 +25,7 @@
         />
 
     <TextView
-        android:id="@+id/view_die_value"
+        android:id="@+id/fragment_die_value"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -32,4 +33,4 @@
         android:text="\?"
         />
 
-</com.bignerdranch.android.nerdroll.view.DieView>
+</LinearLayout>

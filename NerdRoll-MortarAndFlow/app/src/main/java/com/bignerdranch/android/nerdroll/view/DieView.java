@@ -6,7 +6,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bignerdranch.android.nerdroll.R;
-import com.bignerdranch.android.nerdroll.presenter.DiePresenter;
+import com.bignerdranch.android.nerdroll.screen.DieScreen;
 
 import java.util.Random;
 
@@ -18,10 +18,10 @@ import mortar.Mortar;
 
 public class DieView extends LinearLayout {
 
-    @Inject DiePresenter presenter;
+    @Inject DieScreen.Presenter presenter;
 
-    @InjectView(R.id.view_die_text) public TextView mDieTextView;
     @InjectView(R.id.view_die_random) public TextView mRandomTextView;
+    @InjectView(R.id.view_die_value) public TextView mValueTextView;
 
     public DieView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -41,18 +41,18 @@ public class DieView extends LinearLayout {
         presenter.dropView(this);
     }
 
-    public void updateDieText(CharSequence text) {
-        mDieTextView.setText(text);
-    }
-
     public void updateRandomText(CharSequence text) {
         mRandomTextView.setText(text);
+    }
+
+    public void updateValueText(CharSequence text) {
+        mValueTextView.setText(text);
     }
 
     public void roll(int sides) {
         Random r = new Random();
         int num = r.nextInt(sides) + 1;
-        updateRandomText(Integer.toString(num));
+        updateValueText(Integer.toString(num));
     }
 
 }

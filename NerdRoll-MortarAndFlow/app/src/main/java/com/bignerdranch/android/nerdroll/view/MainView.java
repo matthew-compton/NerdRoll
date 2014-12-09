@@ -4,7 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
 
-import com.bignerdranch.android.nerdroll.presenter.MainPresenter;
+import com.bignerdranch.android.nerdroll.screen.MainScreen;
 import com.bignerdranch.android.nerdroll.util.CanShowScreen;
 import com.bignerdranch.android.nerdroll.util.ScreenConductor;
 
@@ -16,7 +16,7 @@ import mortar.Mortar;
 
 public class MainView extends FrameLayout implements CanShowScreen<Blueprint> {
 
-    @Inject MainPresenter presenter;
+    @Inject MainScreen.Presenter presenter;
     private final ScreenConductor<Blueprint> screenMaestro;
 
     public MainView(Context context, AttributeSet attrs) {
