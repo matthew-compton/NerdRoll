@@ -1,5 +1,7 @@
 package com.bignerdranch.android.nerdroll;
 
+import com.bignerdranch.android.nerdroll.controller.DieFragment;
+import com.bignerdranch.android.nerdroll.controller.DieListFragment;
 import com.bignerdranch.android.nerdroll.model.DieList;
 
 import javax.inject.Singleton;
@@ -9,9 +11,8 @@ import dagger.Provides;
 
 @Module(
         injects = {
-                DieListActivity.class,
+                MainActivity.class,
                 DieListFragment.class,
-                DieActivity.class,
                 DieFragment.class
         },
         complete = true)

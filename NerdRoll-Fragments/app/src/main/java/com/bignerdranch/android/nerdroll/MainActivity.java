@@ -8,6 +8,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -15,28 +16,25 @@ import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.ViewConfiguration;
 
+import com.bignerdranch.android.nerdroll.controller.DieFragment;
+import com.bignerdranch.android.nerdroll.controller.DieListFragment;
+
 import java.lang.reflect.Field;
 
-public abstract class BaseActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity implements DieListFragment.DieListCallback {
 
-    private static final String TAG = BaseActivity.class.getSimpleName();
-
-    protected abstract Fragment createFragment();
+    private static final String TAG = MainActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        MainApplication.get(BaseActivity.this).inject(this);
+        MainApplication.get(MainActivity.this).inject(this);
         setContentView(R.layout.activity_main);
 
         // Use toolbar as an action bar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        // Enable back icon being shown on toolbar
-        if (!(this instanceof DieListActivity)) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
         // Custom look for overview screen
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -52,13 +50,6 @@ public abstract class BaseActivity extends ActionBarActivity {
             bm.recycle();
         }
 
-        FragmentManager fm = getSupportFragmentManager();
-        Fragment fragment = fm.findFragmentById(R.id.fragmentContainer);
-        if (fragment == null) {
-            fragment = createFragment();
-            fm.beginTransaction().add(R.id.fragmentContainer, fragment).commit();
-        }
-
         try {
             ViewConfiguration config = ViewConfiguration.get(this);
             Field menuKeyField = ViewConfiguration.class.getDeclaredField("sHasPermanentMenuKey");
@@ -70,17 +61,36 @@ public abstract class BaseActivity extends ActionBarActivity {
             Log.e(TAG, "Error with displaying overflow menu.", e);
         }
 
+        FragmentManager fm = getSupportFragmentManager();
+        Fragment fragment = fm.findFragmentById(R.id.fragmentContainer);
+        if (fragment == null) {
+            fragment = new DieListFragment();
+            fm.beginTransaction().add(R.id.fragmentContainer, fragment).commit();
+        }
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                finish();
+                getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+                super.onBackPressed();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    @Override
+    public void onDieSelected(int position) {
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        FragmentManager fm = getSupportFragmentManager();
+        Fragment fragment = DieFragment.newInstance(position);
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left, R.anim.slide_in_left, R.anim.slide_out_right);
+        ft.replace(R.id.fragmentContainer, fragment);
+        ft.addToBackStack(null);
+        ft.commit();
     }
 
 }

@@ -1,6 +1,7 @@
-package com.bignerdranch.android.nerdroll;
+package com.bignerdranch.android.nerdroll.controller;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -9,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.bignerdranch.android.nerdroll.MainApplication;
+import com.bignerdranch.android.nerdroll.R;
 import com.bignerdranch.android.nerdroll.model.Die;
 import com.bignerdranch.android.nerdroll.model.DieList;
 
@@ -20,7 +23,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
 
-public class DieFragment extends BaseFragment {
+public class DieFragment extends Fragment {
 
     public static final String EXTRA_INDEX = DieFragment.class.getPackage() + ".EXTRA_INDEX";
 
@@ -43,6 +46,7 @@ public class DieFragment extends BaseFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        MainApplication.get(getActivity()).inject(this);
         int index = getArguments().getInt(EXTRA_INDEX, 0);
         mDie = mDieList.get(index);
     }

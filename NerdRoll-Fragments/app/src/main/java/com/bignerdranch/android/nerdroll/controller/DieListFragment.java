@@ -1,8 +1,9 @@
-package com.bignerdranch.android.nerdroll;
+package com.bignerdranch.android.nerdroll.controller;
 
+import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.bignerdranch.android.nerdroll.MainApplication;
+import com.bignerdranch.android.nerdroll.R;
 import com.bignerdranch.android.nerdroll.model.Die;
 import com.bignerdranch.android.nerdroll.model.DieList;
 
@@ -20,10 +23,22 @@ import javax.inject.Inject;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-public class DieListFragment extends BaseFragment {
+public class DieListFragment extends Fragment {
 
     @InjectView(R.id.fragment_die_list_list) ListView mListView;
     @Inject DieList mDieList;
+
+    private DieListCallback mDieListCallback;
+
+    public interface DieListCallback {
+        void onDieSelected(int position);
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        MainApplication.get(getActivity()).inject(this);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -35,9 +50,7 @@ public class DieListFragment extends BaseFragment {
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getActivity(), DieActivity.class);
-                intent.putExtra(DieFragment.EXTRA_INDEX, position);
-                startActivity(intent);
+                mDieListCallback.onDieSelected(position);
             }
         });
 
@@ -48,6 +61,18 @@ public class DieListFragment extends BaseFragment {
         public DieListAdapter(Context context, List<Die> objects) {
             super(context, android.R.layout.simple_list_item_1, objects);
         }
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        mDieListCallback = (DieListCallback) activity;
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mDieListCallback = null;
     }
 
 }

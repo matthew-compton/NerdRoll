@@ -47,26 +47,30 @@ public class MainScreen implements Blueprint {
     @Singleton
     public static class Presenter extends FlowOwner<Blueprint, MainView> {
 
-        private final ActionBarOwner actionBarOwner;
+        private final ActionBarOwner mActionBarOwner;
+        private String mTitle;
 
         @Inject
         public Presenter(Parcer<Object> flowParcer, ActionBarOwner actionBarOwner) {
             super(flowParcer);
-            this.actionBarOwner = actionBarOwner;
+            this.mActionBarOwner = actionBarOwner;
         }
 
         @Override
         public void showScreen(Blueprint newScreen, Flow.Direction direction) {
             boolean hasUp = newScreen instanceof HasParent;
-            String title = "NerdRoll";
             ActionBarOwner.MenuAction menu = null;
-            actionBarOwner.setConfig(new ActionBarOwner.Config(false, hasUp, title, menu));
+            mActionBarOwner.setConfig(new ActionBarOwner.Config(false, hasUp, mTitle, menu));
             super.showScreen(newScreen, direction);
         }
 
         @Override
         protected Blueprint getFirstScreen() {
             return new DieListScreen();
+        }
+
+        public void setTitle(String title) {
+            mTitle = title;
         }
 
     }
