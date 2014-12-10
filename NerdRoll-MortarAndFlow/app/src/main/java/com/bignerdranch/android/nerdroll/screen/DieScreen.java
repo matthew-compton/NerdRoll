@@ -24,6 +24,7 @@ import rx.functions.Action0;
 @Layout(R.layout.view_die)
 public class DieScreen implements HasParent<DieListScreen>, Blueprint {
 
+    @Inject DieList mDieList;
     private final int mDieIndex;
 
     public DieScreen(int mDieIndex) {
@@ -48,8 +49,8 @@ public class DieScreen implements HasParent<DieListScreen>, Blueprint {
     @dagger.Module(injects = DieView.class, addsTo = MainScreen.Module.class)
     public class Module {
         @Provides
-        Die provideDie(DieList dieList) {
-            return dieList.get(mDieIndex);
+        Die provideDie() {
+            return mDieList.get(mDieIndex);
         }
     }
 
